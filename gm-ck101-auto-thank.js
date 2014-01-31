@@ -1,10 +1,11 @@
 // ==UserScript==
-// @name       CK101 - Auto Thank for Extra Content
-// @namespace  http://blog.tsaiid.idv.tw/project/gmscripts/ck101-auto-thank-for-extra-content/
-// @version    0.2
-// @description  Some articles on Ck101 hide the extra content and you have to "Thank" the author to get it. This script will automatically "Thank the author" at the first loading.
-// @match      http://ck101.com/*
-// @copyright  2013+, I-Ta Tsai (http://blog.tsaiid.idv.tw/)
+// @name            Ck101 - Auto Thank for Extra Content
+// @namespace       http://tsai.it/project/gmscripts/ck101-auto-thank-for-extra-content/
+// @version         0.2
+// @description     Some articles on Ck101 hide the extra content and you have to "Thank" the author to get it. This script will automatically "Thank the author" at the first loading.
+// @match           http://ck101.com/*
+// @grant           unsafeWindow
+// @copyright       2013+, I-Ta Tsai (http://tsai.it/)
 // ==/UserScript==
 
 // Use pre-loaded jQuery by ck101.
