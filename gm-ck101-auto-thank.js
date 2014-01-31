@@ -11,27 +11,24 @@
 var $ = unsafeWindow.jQuery;
 
 if ($('.lockThankBtn').length) {
-    var thank_func = $('#post_thank').attr('onclick');
-
     var launch_thank = function() {
         // create a deferred object
         var r = $.Deferred();
 
         // do whatever you want (e.g. ajax/animations other asyc tasks)
-        $.globalEval(thank_func)
+        $('#post_thank').click();
 
         setTimeout(function() {
             // and call `resolve` on the deferred object, once you're done
-            r.resolve();
+            if ($('#postform').length)
+                r.resolve();
         }, 500);
 
         // return the deferred object
-        return r;
+        return r.promise();
     };
 
     launch_thank().done(function() {
-        if ($('#postform').length) {
-            $('#postform').submit();
-        }
+        $('#postform').submit();
     });
 }
