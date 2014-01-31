@@ -10,25 +10,15 @@
 // Use pre-loaded jQuery by ck101.
 var $ = unsafeWindow.jQuery;
 
-if ($('.lockThankBtn').length) {
-    var launch_thank = function() {
-        // create a deferred object
-        var r = $.Deferred();
-
-        // do whatever you want (e.g. ajax/animations other asyc tasks)
+$( document ).ready(function() {
+    if ($('.lockThankBtn').length) {
         $('#post_thank').click();
 
-        setTimeout(function() {
-            // and call `resolve` on the deferred object, once you're done
-            if ($('#postform').length)
-                r.resolve();
+        var intervalId = setInterval(function() {
+            if ($('#postform').length) {
+                $('#postsubmit').click();
+                clearInterval(intervalId);
+            }
         }, 500);
-
-        // return the deferred object
-        return r.promise();
-    };
-
-    launch_thank().done(function() {
-        $('#postform').submit();
-    });
-}
+    }
+});
