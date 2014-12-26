@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Ck101 - Auto Thank for Extra Content
 // @namespace       http://tsai.it/project/gmscripts/ck101-auto-thank-for-extra-content/
-// @version         0.2
+// @version         0.2.1
 // @description     Some articles on Ck101 hide the extra content and you have to "Thank" the author to get it. This script will automatically "Thank the author" at the first loading.
 // @match           http://ck101.com/*
 // @grant           unsafeWindow
