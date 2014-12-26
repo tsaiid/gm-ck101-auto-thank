@@ -12,7 +12,7 @@
 var $ = unsafeWindow.jQuery;
 
 $( document ).ready(function() {
-    if ($('.lockThankBtn').length) {
+    if ($('.lockThankBtn').length || $('.locked').length) {
         $('#post_thank').click();
 
         var intervalId = setInterval(function() {
